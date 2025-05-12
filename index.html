@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kushwaha RO Water - शुद्ध पेयजल समाधान</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css "/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins :wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #0066cc;
+      --secondary-color: #004d99;
+      --accent-color: #00cc66;
+      --dark-color: #222222;
+      --light-color: #f8f9fa;
+      --text-color: #444444;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      color: var(--text-color);
+      background-color: var(--white);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--dark-color);
+      font-weight: 600;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+      box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header.scrolled {
+      padding: 15px 0;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo h1 {
+      color: var(--primary-color);
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .logo p {
+      color: #666;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 30px;
+    }
+
+    .navbar ul li a {
+      color: var(--dark-color);
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    .navbar ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .navbar ul li a:hover::after,
+    .navbar ul li a.active::after {
+      width: 100%;
+    }
+
+    .mobile-menu-btn {
+      font-size: 1.5rem;
+      color: var(--dark-color);
+      cursor: pointer;
+      display: none;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.hdwallpapers.in/download/spring_waterfall_stone_fog_mist_green_forest_4k_hd_nature-HD.jpg') no-repeat center center/cover;
+      z-index: -1;
+      animation: zoomEffect 20s infinite alternate;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+      color: white;
+      transform: translateY(50px);
+      opacity: 0;
+      animation: fadeInUp 1s ease 0.5s forwards;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Owner Section */
+    .owner-section {
+      background: linear-gradient(rgba(0, 102, 204, 0.9), rgba(0, 102, 204, 0.9)), url('https://wallpapercave.com/wp/wp3155700.jpg ') no-repeat center center/cover;
+      padding: 100px 0;
+      text-align: center;
+      color: white;
+      background-attachment: fixed;
+    }
+
+    .owner-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .owner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .owner-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+    }
+
+    .owner-photo:hover {
+      transform: scale(1.05);
+      border-color: white;
+    }
+
+    .owner-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .owner-info p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    /* Products Section */
+    .products {
+      background-color: #cadced;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    .product-card.animated {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.1);
+    }
+
+    .product-details {
+      padding: 25px;
+    }
+
+    .product-details h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .product-details p {
+      color: var(--text-color);
+      margin-bottom: 15px;
+    }
+
+    .price {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    /* Services Section */
+    .services {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .services .section-title h2,
+    .services .section-title p {
+      color: white;
+    }
+
+    .services .section-title h2::after {
+      background-color: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      text-align: center;
+      border-radius: 10px;
+      transition: var(--transition);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    .service-card.animated {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .service-card:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-10px);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    .service-card p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Location Section */
+    .location-section {
+      padding: 100px 0;
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://i.pinimg.com/originals/36/21/8d/36218db0b09ba24b19b9fa9a7875af47.jpg ') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    .location-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .location-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .location-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .location-content p i {
+      color: var(--primary-color);
+      margin-right: 10px;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+    }
+
+    .map-link:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+    }
+
+    .map-link i {
+      margin-right: 8px;
+    }
+
+    /* Contact Section */
+    .contact {
+      background-color: #f9fbfd;
+    }
+
+    .contact-content {
+      display: flex;
+      gap: 50px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .contact-info {
+      flex: 1;
+      padding: 40px;
+      background: linear-gradient(rgba(0, 102, 204, 0.9), rgba(0, 102, 204, 0.9)), url('https://cdn.pixabay.com/photo/2021/10/14/14/58/water-6709340_1280.jpg ') no-repeat center center/cover;
+      color: white;
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .contact-info ul li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info ul li i {
+      color: white;
+      margin-right: 10px;
+      width: 20px;
+      font-size: 1.2rem;
+    }
+
+    .social-links {
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 10px;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background-color: white;
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .contact-form {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .contact-form h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+      outline: none;
+    }
+
+    .form-group textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--dark-color);
+      color: white;
+      padding: 80px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+      color: white;
+    }
+
+    .footer-col h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--primary-color);
+    }
+
+    .footer-col p,
+    .footer-col ul li a {
+      color: #bbb;
+      transition: var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: white;
+      padding-left: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #444;
+      color: #bbb;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomEffect {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .about-content,
+      .contact-content {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+        padding: 20px 0;
+      }
+
+      .navbar.active {
+        left: 0;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+
+      .navbar ul li {
+        margin: 0 0 15px 0;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .section-padding {
+        padding: 60px 0;
+      }
+
+      .hero-content {
+        transform: none;
+        animation: none;
+        opacity: 1;
+      }
+
+      .location-content {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Kushwaha Water</h1>
+        <p>शुद्ध RO जल समाधान</p>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" class="active">होम</a></li>
+          <li><a href="#about">हमारे बारे में</a></li>
+          <li><a href="#products">उत्पाद</a></li>
+          <li><a href="#services">सेवाएं</a></li>
+          <li><a href="#owner">मालिक</a></li>
+          <li><a href="#location">स्थान</a></li>
+          <li><a href="#contact">संपर्क</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>स्वस्थ जीवन के लिए शुद्ध RO जल</h1>
+      <p>आपके दरवाजे पर 24/7 शुद्धिकृत जल सेवा</p>
+      <a href="#contact" class="btn btn-accent">अभी ऑर्डर करें</a>
+    </div>
+  </section>
+
+  <!-- Owner -->
+  <section class="owner-section" id="owner">
+    <div class="owner-container">
+      <div class="section-title">
+        <h2>हमारे मालिक</h2>
+        <p>Kushwaha Water के पीछे का व्यक्ति</p>
+      </div>
+      <div class="owner-content">
+        <img src="vikash.jpg " alt="मालिक की फोटो" class="owner-photo">
+        <div class="owner-info">
+          <h3>विकास कुशवाहा</h3>
+          <p>संस्थापक एवं सीईओ</p>
+          <p>जल शुद्धिकरण में 5+ साल के अनुभव के साथ, मैंने क्षेत्र के हर घर में सस्ती, उच्च गुणवत्ता वाला पेयजल उपलब्ध कराने के लिए Kushwaha Water की स्थापना की।</p>
+          <a href="#contact" class="btn">मालिक से संपर्क करें</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products section-padding" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>हमारे उत्पाद</h2>
+        <p>अपने परिवार और व्यवसाय के लिए सर्वोत्तम जल समाधान चुनें</p>
+      </div>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.jR2IiLtuvujOX6dIO_2q4gHaHa&pid=Api&P=0&h=180" alt="RO प्रणाली">
+          </div>
+          <div class="product-details">
+            <h3>घरेलू RO प्रणाली</h3>
+            <p>घरों के लिए कॉम्पैक्ट RO प्रणाली</p>
+            <span class="price">₹20/कैन</span>
+            <a href="#contact" class="btn">कॉल/व्हाट्सएप पर बुक करें</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.7lbDuFhCvRFrSg7rjSwkjgHaHa&pid=Api&P=0&h=180 " alt="जल कैन">
+          </div>
+          <div class="product-details">
+            <h3>20L प्रीमियम जल कैन</h3>
+            <p>शुद्ध RO जल सीलबंद कंटेनरों में</p>
+            <span class="price">₹50/जार/दिन</span>
+            <a href="#contact" class="btn">अभी ऑर्डर करें</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src=" shop.jpg" alt="वाणिज्यिक RO">
+          </div>
+          <div class="product-details">
+            <h3>वाणिज्यिक RO प्रणाली</h3>
+            <p>कार्यालयों, रेस्तरां के लिए</p>
+            <span class="price">₹20 (केवल जल)</span>
+            <a href="#contact" class="btn">पूछताछ करें</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location-section" id="location">
+    <div class="location-container">
+      <div class="section-title">
+        <h2>हमारा स्थान</h2>
+        <p>हमें देखने आएं या हमारे सेवा क्षेत्र को देखें</p>
+      </div>
+      <div class="location-content">
+        <p><i class="fas fa-map-marker-alt"></i> कोइरी टोला जंगल लुआठाहा, कुशीनगर, उत्तर प्रदेश</p>
+        <p><i class="fas fa-truck"></i> सेवा क्षेत्र: 10 किमी के दायरे में</p>
+        <a href="https://maps.app.goo.gl/YjWofAMX925LBv1W8" class="map-link" target="_blank">
+                    <i class="fas fa-map-marked-alt"></i> Google मानचित्र पर देखें
+                </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>हमारी सेवाएं</h2>
+        <p>आपकी सभी आवश्यकताओं के लिए व्यापक जल समाधान</p>
+        <p>शुद्ध जल - शुभ संस्कारों की पहली शर्त
+
+Kushwaha RO Water आपके सभी शुभ अवसरों जैसे:
+
+शादी विवाह
+
+सगाई समारोह
+
+जन्मदिन पार्टी
+
+धार्मिक अनुष्ठान
+
+सामुदायिक कार्यक्रम
+
+के लिए प्रीमियम गुणवत्ता वाला शुद्ध RO जल उपलब्ध कराता है।</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-tint"></i>
+          <h3>RO स्थापना</h3>
+          <p>RO प्रणाली की पेशेवर स्थापना</p>
+          <p>अतिरिक्त सुविधाएं:
+
+स्वच्छ और स्टाइलिश वाटर डिस्पेंसर
+
+प्रशिक्षित स्टाफ द्वारा व्यवस्था
+
+आपातकालीन आवश्यकता पर 24x7 सेवा</p>
+<h1>क्यों चुनें हमें?
+
+✓ 7-स्टेज शुद्धिकरण प्रक्रिया
+✓ ISI मानकों के अनुरूप जल
+✓ सुनियोजित डिलीवरी सिस्टम
+✓ किफायती दरें (₹20/कैन से शुरू)
+✓ 100% हाइजेनिक डिलीवरी</h1>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tools"></i>
+          <h3>AMC सेवाएं</h3>
+          <p>वार्षिक रखरखाव सेवाएं</p>
+          <p>बुकिंग प्रक्रिया:
+
+कॉल/व्हाट्सएप करें: +91 7754999984
+
+अपनी आवश्यकताएं बताएं:
+
+कार्यक्रम की तिथि
+
+जल की अनुमानित मात्रा
+
+डिलीवरी स्थान
+
+30% अग्रिम भुगतान पर बुकिंग पुष्टि
+
+कार्यक्रम स्थल पर समय से डिलीवरी</p>
+<p>हमारी विशेष सेवाएं:</p><p>
+ <h5>
+बल्क ऑर्डर डिस्काउंट: 
+बल्क ऑर्डर डिस्काउंट:
+
+40+ कैन ऑर्डर पर 10% विशेष छूट
+
+पूरे कार्यक्रम के लिए एक्सक्लूसिव वाटर सप्लाई</h5>
+</p></p>
+
+विशेष पैकेज:
+
+शादी पैकेज: 5 दिनों तक निर्बाध जल आपूर्ति
+
+सामूहिक कार्यक्रम पैकेज: प्रति घंटे 50+ कैन की सप्लाई</p>
+          
+        </div>
+        <div class="service-card">
+          <i class="fas fa-truck"></i>
+          <h3>जल वितरण</h3>
+          <p>नियमित जल कैन डिलीवरी</p>
+          <p>विशेष नोट:
+हम ग्रामीण क्षेत्रों में भी बड़े कार्यक्रमों के लिए विशेष व्यवस्था करते हैं। जंगल लुआठाहा और आसपास के 15 किमी क्षेत्र में निःशुल्क डिलीवरी।
+
+संपर्क सूत्र:
+📍 कोइरी टोला, जंगल लुआठाहा, गोररिया, कुशीनगर
+📞 7754999984
+📧 vikash38@git,gmail.com
+🕒 सुबह 7:00 से रात 9:00 तक
+
+"हमारा वादा - आपके विशेष अवसर पर शुद्धता का विशेष ध्यान"</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-flask"></i>
+          <h3>जल परीक्षण</h3>
+          <p>मुफ्त जल गुणवत्ता परीक्षण</p>
+          <p>अतिरिक्त सुविधाएं:
+
+स्वच्छ और स्टाइलिश वाटर डिस्पेंसर
+
+प्रशिक्षित स्टाफ द्वारा व्यवस्था
+
+आपातकालीन आवश्यकता पर 24x7 सेवा</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>हमसे संपर्क करें</h2>
+        <p>शुद्ध जल समाधान के लिए संपर्क करें</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>संपर्क विवरण</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> कोइरी टोला जंगल लुआठाहा, कुशीनगर, उत्तर प्रदेश</li>
+            <li><i class="fas fa-phone"></i> +91 7754999984</li>
+            <li><i class="fas fa-envelope"></i> vikash38@git,gmail.com</li>
+            <li><i class="fas fa-clock"></i> सोम-रवि: 7:00 AM - 9:00 PM</li>
+          </ul>
+          <div class="social-links">
+             <div class="social-links">
+                        <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/@sky_kushinagar" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/+917754999984" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+917754999984"><i class="fas fa-phone-alt"></i></a>
+                    </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>प्रतिक्रिया दें</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="आपका नाम" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="आपका ईमेल" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="आपका फोन नंबर" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="आपका संदेश" required></textarea>
+            </div>
+            <button type="submit" class="btn">संदेश भेजें</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Kushwaha Water</h3>
+          <p>2020 से गुणवत्ता और ग्राहक संतुष्टि के साथ जल समाधान</p>
+          <div class="social-links">
+             <div class="social-links">
+                        <a href="https://www.facebook.com/yourusername" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/@sky_kushinagar" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/+917754999984" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+917754999984"><i class="fas fa-phone-alt"></i></a>
+                    </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>त्वरित लिंक</h3>
+          <ul>
+            <li><a href="#home">होम</a></li>
+            <li><a href="#about">हमारे बारे में</a></li>
+            <li><a href="#products">उत्पाद</a></li>
+            <li><a href="#services">सेवाएं</a></li>
+            <li><a href="#owner">मालिक</a></li>
+            <li><a href="#location">स्थान</a></li>
+            <li><a href="#contact">संपर्क</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>उत्पाद</h3>
+          <ul>
+            <li><a href="#">घरेलू RO</a></li>
+            <li><a href="#">वाणिज्यिक RO</a></li>
+            <li><a href="#">जल कैन</a></li>
+            <li><a href="#">फिल्टर</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>संपर्क जानकारी</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> कोइरी टोला, जंगल लुआठाहा, कुशीनगर</li>
+            <li><i class="fas fa-phone"></i> +91 7754999984</li>
+            <li><i class="fas fa-envelope"></i> vikash38@git,gmail.com</li>
+            <li><i class="fas fa-clock"></i> 7:00 AM - 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Kushwaha Water. सभी अधिकार सुरक्षित.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navbar = document.querySelector('.navbar');
+      mobileMenuBtn.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+        this.querySelector('i').classList.toggle('fa-times');
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          navbar.classList.remove('active');
+          mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Sticky Header
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Contact Form
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+          console.log('Form submitted:', data);
+          alert('आपका संदेश प्राप्त हो गया है! हम जल्दी से संपर्क करेंगे।');
+          this.reset();
+        });
+      }
+
+      // Scroll Animations
+      function animateOnScroll() {
+        const elements = document.querySelectorAll('.product-card, .service-card');
+        const windowHeight = window.innerHeight;
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+          if (elementPosition < windowHeight - elementVisible) {
+            element.classList.add('animated');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', animateOnScroll);
+      animateOnScroll();
+    });
+  </script>
+</body>
+</html>
